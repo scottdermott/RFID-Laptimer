@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap Stuff -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!--script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
+
+    <!-- jQuery Modal -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script type="text/javascript" src="main.js"></script>
+    <title>SCODER - LAPTIMER</title>
+</head>
+
+<body>
+    <div id="ex1" class="modal">
+      <p>Edit Rider</p>
+      <label>RFID
+        <select id="riders">
+            <option>--Select RFID--</option>
+        </select>
+      </label>
+      <br>
+      <label>Rider Name
+        <input type="text" id="rider_name" name="rider_name">
+      </label>
+      <br>
+      <a class="btn" id="save_rider" href="#">Save</a>
+      <a class="btn" href="#" rel="modal:close">Close</a>
+    </div>
+    <div id="ex2" class="modal">
+      <p>Are you super sure you want to delete all lap data?</p>
+        <button type="button" class="btn" id="deleteAllLaps">Do It!</button>
+        <a class="btn" href="#" rel="modal:close">Close</a>
+    </div>
+    <div class="container">
+        <div class="wrapper">
+          <!--p class="title">Pit Bike UHF RFID</p-->
+          <div class="clip-text clip-text_fourteen clip-text--cover">UHF RFID LAPTIMER</div>
+      </div>
+        <a class="btn" href="#ex1" rel="modal:open">Edit Rider</a>
+        <a class="btn" href="#ex2" rel="modal:open">Delete All Laps</a>
+        <div style="float: right;">
+            <span style="color:#ddd;">Auto Refresh : </span>
+            <label class="switch">
+                <input id="slider" type="checkbox" checked>
+                <span class="slider round"></span>
+            </label>
+        </div>
+    </div>
+    <table id="example" class="display" style="width:100%">
+
+        <tbody>
+            <!-- Laptimes should appear here -->
+        </tbody>
+    </table>
+</body>
+</html>

@@ -1,0 +1,228 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+:before,
+:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+body {
+  font-family: 'Oswald', sans-serif;
+  background-color: #000;
+}
+
+table.dataTable tr.odd { background-color: #d8d8d8 !important; }
+tr.odd .sorting_1 { background-color: #d8d8d8 !important; }
+a.btn {
+  color: #fff;
+  background: #FF0066;
+  padding: .5rem 1rem;
+  display: inline-block;
+  border-radius: 4px;
+  transition-duration: .25s;
+  border: none;
+}
+a.btn:hover {
+  background: #22272a;
+}
+
+button.btn {
+  color: #fff;
+  background: #FF0066;
+  padding: .5rem 1rem;
+  display: inline-block;
+  border-radius: 4px;
+  transition-duration: .25s;
+  border: none;
+  font-size: 14px;
+}
+button.btn:hover {
+  background: #22272a;
+}
+
+.modal a.close-modal {
+    position: absolute;
+    top: 1.5px;
+    right: 1.5px;
+}
+
+table td {
+  color: #000;
+  font-size: 1.7rem;
+}
+
+table thead {
+  color: #fff;
+}
+
+.wrapper {
+  text-align: center;
+}
+
+.title {
+  font-size: 2em;
+  position: relative;
+  margin: 0 auto 1em;
+  padding: 1em 1em .25em 1em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.title:after {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  width: 240px;
+  height: 4px;
+  margin-left: -120px;
+  content: '';
+  background-color: #fff;
+}
+
+/* Clip text element */
+.clip-text {
+  font-size: 5em;
+  font-weight: bold;
+  line-height: 1;
+  position: relative;
+  display: inline-block;
+  margin: .25em;
+  padding: .5em .75em;
+  text-align: center;
+  /* Color fallback */
+  color: #fff;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.clip-text:before,
+.clip-text:after {
+  position: absolute;
+  content: '';
+}
+
+/* Background */
+.clip-text:before {
+  z-index: -2;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: inherit;
+}
+
+/* Text Background (black zone) */
+.clip-text:after {
+  position: absolute;
+  z-index: -1;
+  top: .125em;
+  right: .125em;
+  bottom: .125em;
+  left: .125em;
+  background-color: #000;
+}
+
+/* Change the background position to display letter when the black zone isn't here */
+.clip-text--no-textzone:before {
+  background-position: -.75em 0;
+}
+
+.clip-text--no-textzone:after {
+  content: none;
+}
+
+/* Use Background-size cover for photo background and no-repeat background */
+.clip-text--cover,
+.clip-text--cover:before {
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+/* Background image from http://thepatternlibrary.com/ and http://lorempixel.com */
+.clip-text_one {
+  background-image: url(scoder.jpeg);
+}
+
+.clip-text_two {
+  background-image: url(scoder.jpeg);
+}
+
+.clip-text_fourteen {
+  background-image: url(scoder.jpeg);
+}
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 28px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #FF0066;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
